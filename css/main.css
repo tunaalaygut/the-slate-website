@@ -1,0 +1,155 @@
+@import "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+:root{
+    --header-font: 'Orbitron', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
+    --accent-color: #E74C3C;
+    --accent-color-2: #8E44AD;
+    --accent-color-3: #2E86C1;
+    --scale-amount: scale(1.03);
+    --shadow: 
+                0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                0 100px 80px rgba(0, 0, 0, 0.12);
+    --body-bg: rgb(30, 39, 46);
+}
+
+body{
+    font-family: var(--body-font);
+    background-color: var(--body-bg);
+}
+
+#banner{
+    padding: 3%;
+    margin: 0;
+    background: url("../img/banner-bg.jpg") no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+#bg-overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(30, 39, 46, 0.85);
+}
+
+#banner-title{
+    font-family: var(--header-font);
+    font-size: 7vw;
+    font-weight: 900;
+}
+
+#banner-subtitle{
+    font-family: var(--header-font);
+    font-size: 3vw;
+}
+
+button{
+    background: var(--accent-color);
+    border: none;
+    color: white;
+    width: 50%;
+    font-family: var(--body-font);
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: 300ms ease-in-out;
+}
+
+button:hover{
+    transform: var(--scale-amount);
+}
+
+#information{   
+    margin-top: 10px;
+}
+
+.info-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0 30px;
+}
+
+.info-col{
+    padding: 18px;
+    color: white;
+    transition: 300ms ease-in-out;
+    border-radius: 3px;
+    align-self: auto;
+    display: inline-flexbox;
+    margin: 0 10px;
+    opacity: 0.9;
+}
+
+.info-text{
+    text-align: justify;
+}
+
+#sne-info{
+    background-color: var(--accent-color);
+}
+
+#cobo-info{
+    background-color: var(--accent-color-2);
+}
+
+#svc-info{
+    background-color: var(--accent-color-3);
+}
+
+.info-title{
+    font-family: var(--header-font);
+    text-align: center;
+    font-weight: 900;
+    position: relative;
+    
+}
+
+.info-title:after{
+    position: absolute;
+    content: '';
+    left: 15%;
+    right: 15%;
+    height: 3px;
+    width: 0%;
+    bottom: -4px;
+    background: rgba(255, 255, 255, 0.5);
+    transition: 300ms linear;
+}
+
+.info-col:hover > .info-title:after{
+    width: 70%;
+}
+
+.info-col:hover{
+    transform: var(--scale-amount);
+    z-index: 1;
+    box-shadow: var(--shadow);
+    opacity: 1;
+        
+}
+
+
+@media screen and (max-width: 1023px){
+    .info-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        padding: 0 15px;
+    }
+    .info-col{
+        margin: 0 0;
+    }
+}
