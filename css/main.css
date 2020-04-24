@@ -6,9 +6,9 @@
     --header-font: 'Orbitron', sans-serif;
     --body-font: 'Open Sans', sans-serif;
     --accent-color: #E74C3C;
-    --accent-color-2: #8E44AD;
-    --accent-color-3: #2E86C1;
-    --scale-amount: scale(1.03);
+    --accent-color-2: rgb(90, 45, 109);
+    --accent-color-3: rgb(37, 102, 146);
+    --scale-amount: scale(1.015);
     --shadow: 
                 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
                 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -86,27 +86,82 @@ button:hover{
     padding: 18px;
     color: white;
     transition: 300ms ease-in-out;
-    border-radius: 3px;
+    border-radius: 2px;
     align-self: auto;
     display: inline-flexbox;
     margin: 0 10px;
-    opacity: 0.9;
+    z-index: 0;
 }
 
 .info-text{
     text-align: justify;
 }
 
+#footer{
+    background-color: rgb(22, 29, 34);
+    padding: 15px 50px;
+}
+
+.footer-text{
+    margin-bottom: 0;
+    color:  rgb(134, 135, 136);
+    text-align: center;
+    font-size: 0.9em;
+    font-family: var(--body-font);
+}
+
 #sne-info{
+    position: relative;
+    background: url("../img/ne.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+.sne-overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
     background-color: var(--accent-color);
+    opacity: 0.6;
+    border-radius: 2px;
+    z-index: -1;
 }
 
 #cobo-info{
+    position: relative;
+    background: url("../img/cobo.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+.cobo-overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
     background-color: var(--accent-color-2);
+    opacity: 0.8;
+    border-radius: 2px;
+    z-index: -1;
 }
 
 #svc-info{
+    position: relative;
+    background: url("../img/eye.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+.svc-overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
     background-color: var(--accent-color-3);
+    opacity: 0.6;
+    border-radius: 2px;
+    z-index: -1;
 }
 
 .info-title{
@@ -114,7 +169,7 @@ button:hover{
     text-align: center;
     font-weight: 900;
     position: relative;
-    
+    font-size: 1.5em;
 }
 
 .info-title:after{
@@ -139,6 +194,45 @@ button:hover{
     box-shadow: var(--shadow);
     opacity: 1;
         
+}
+
+.more-info-container{
+    margin-top: 20px;
+    color: white;
+    padding: 0px 20px 20px 20px;
+    background-color: rgb(22, 29, 34);
+}
+
+.more-info{
+    padding: 10px 20px 20px 20px;
+}
+
+.more-info-title{
+    font-family: var(--header-font);
+    font-weight: 900;
+    font-size: 2em;
+}
+
+.more-info-lead{
+    font-family: var(--body-font);
+    margin-bottom: 20px;
+}
+
+.github-button{
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: rgb(87, 187, 67);
+}
+
+.documentation-button{
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: rgb(67, 159, 187);
+}
+
+.contact-button{
+    width:100%;
+    background-color: rgb(67, 79, 187);
 }
 
 
